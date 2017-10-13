@@ -1,0 +1,2 @@
+class PortfloiosController < ApplicationController
+end

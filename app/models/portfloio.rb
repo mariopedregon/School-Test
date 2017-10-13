@@ -1,0 +1,2 @@
+class Portfloio < ApplicationRecord
+end
