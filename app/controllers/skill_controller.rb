@@ -4,7 +4,7 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    @skills = Skill.all
   end
 
   # GET /blogs/1
@@ -14,7 +14,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs/new
   def new
-    @blog = Blog.new
+    @skill = Skill.new
   end
 
   # GET /blogs/1/edit
@@ -24,11 +24,11 @@ class BlogsController < ApplicationController
   # POST /blogs
   # POST /blogs.json
   def create
-    @blog = Blog.new(blog_params)
+    @skill = Skill.new(skill_params)
 
     respond_to do |format|
-      if @blog.save
-        format.html { redirect_to @blog, notice: 'Your Post Is Now Live.' } 
+      if @skill.save
+        format.html { redirect_to @skill, notice: 'Your Post Is Now Live.' } 
       else
         format.html { render :new }
         
@@ -40,8 +40,8 @@ class BlogsController < ApplicationController
   # PATCH/PUT /blogs/1.json
   def update
     respond_to do |format|
-      if @blog.update(blog_params)
-        format.html { redirect_to @blog, notice: 'Blog was successfully updated.' } 
+      if @skill.update(skill_params)
+        format.html { redirect_to @skill, notice: 'Blog was successfully updated.' } 
       else
         format.html { render :edit }
         
@@ -52,21 +52,21 @@ class BlogsController < ApplicationController
   # DELETE /blogs/1
   # DELETE /blogs/1.json
   def destroy
-    @blog.destroy
+    @skill.destroy
     respond_to do |format|
-      format.html { redirect_to blogs_url, notice: 'Blog was successfully destroyed.' }
+      format.html { redirect_to skills_url, notice: 'Blog was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_blog
-      @blog = Blog.friendly.find(params[:id])
+    def set_skill
+      @skill = Skill.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def blog_params
-      params.require(:blog).permit(:title, :body)
+    def skill_params
+      params.require(:skill).permit(:title, :percen_utilized)
     end
 end
