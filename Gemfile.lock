@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/mariopedregon/pedregon_view_tool
-  revision: e1ea15bc400869ae64457f3456d30566a04b42ba
+  revision: 0a13e5aa5c11dd6d81d9de7877c33581158cb7a2
   specs:
     pedregon_view_tool (0.1.0)
 
@@ -179,7 +179,7 @@ GEM
       execjs (>= 0.3.0, < 3)
     warden (1.2.7)
       rack (>= 1.0)
-    web-console (3.5.1)
+    web-console (3.6.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
       bindex (>= 0.4.0)

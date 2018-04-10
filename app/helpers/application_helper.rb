@@ -16,4 +16,8 @@ module ApplicationHelper
           content_tag(:p, greeting, class: "source-greeting") 
         end
     end
-end
+
+    def copyright_generator
+      PedregonViewTool::Renderer.copyright "Mario Pedregon", "All Rights Reserved"
+    end
+  end
