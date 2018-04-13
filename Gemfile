@@ -56,3 +56,5 @@ gem 'devise','~> 4.4','>=4.4.1'
 gem 'bootstrap', '~> 4.0.0'
 
 gem 'pedregon_view_tool', git: 'https://github.com/mariopedregon/pedregon_view_tool'
+
+gem 'petergate', '~> 1.8', '>= 1.8.1'
